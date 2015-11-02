@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">smartComplaint</string>
+    <string name="action_settings">Logout</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="logout">Logout</string>
+
+    <string name="complaint">Complaint detail</string>
+    <string name="complaint_location">Complaint Location</string>
+</resources>

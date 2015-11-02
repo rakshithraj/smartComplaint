@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cropped"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@android:color/white"
+        android:id="@+id/btLogout"
+        android:padding="2dp"
+        android:background="@drawable/loginshape"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btLogout"
+        >
+
+    <Button
+        android:id="@+id/btMNPO"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btPolice"
+        android:layout_below="@+id/btPolice"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/whitebg"
+        android:text="MNPO"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btMescom"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/btMNPO"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/whitebg"
+        android:text="Mescom"
+        android:textColor="#ffffff" />
+
+
+    <Button
+        android:id="@+id/btTraffic"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btMescom"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/whitebg"
+        android:text="Traffic"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btPolice"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignBaseline="@+id/btTraffic"
+        android:layout_alignBottom="@+id/btTraffic"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/whitebg"
+        android:text="Police"
+        android:textColor="#ffffff" />
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="26dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:text="status"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btAboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:text="About us"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cropped"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imRotate"
+            android:layout_width="150dp"
+            android:layout_height="165dp"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/editbg" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/loginshape">
+
+            <TextView
+                android:id="@+id/tvhaeding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="SmartCompliant"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="3dp"
+            android:text="* Police"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:text="* MMP"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:text="* Traffic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="320dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout2"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="22dp"
+                android:background="@drawable/loginshape"
+                android:text="MMP"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Complaint realted to MNP is logged here. click on the tab police in dashbord and log ur complainnt and filled req details and send it to govt bodies.AnD keep track about ur staus of the complaint."
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="320dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/linearLayout3"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="22dp"
+                android:background="@drawable/loginshape"
+                android:text="Traffic"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" Complaint realted to TRAFFIC is logged here. click on the tab police in dashbord and log ur complainnt and filled req details and send it to govt bodies.AnD keep track about ur staus of the complaint."
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_marginTop="10dp"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="22dp"
+                android:background="@drawable/loginshape"
+                android:text=" Mescom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" Complaint realted to MESCOM is logged here. click on the tab police in dashbord and log ur complainnt and filled req details and send it to govt bodies.AnD keep track about ur staus of the complaint."
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:text="* Mescom"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="320dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/textView3"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="320dp"
+                android:layout_height="22dp"
+                android:background="@drawable/loginshape"
+                android:text="Police"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" Complaint realted to POLICE is logged here. click on the tab police in dashbord and log ur complainnt and filled req details and send it to govt bodies.AnD keep track about ur staus of the complaint."
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

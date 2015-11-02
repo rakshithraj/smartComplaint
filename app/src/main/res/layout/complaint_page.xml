@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cropped" >
+
+    
+
+        <ImageView
+            android:id="@+id/imgUploaded"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/azmal2" />
+
+        <Button
+            android:id="@+id/btUpload"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/btTakePic"
+            android:layout_alignBottom="@+id/btTakePic"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/loginshape"
+            android:text="Upload"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btTakePic"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imgUploaded"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/loginshape"
+            android:text="Take pic"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/btUpload"
+            android:layout_alignRight="@+id/btTakePic"
+            android:layout_below="@+id/btUpload"
+            android:background="@drawable/editbg"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:textColor="#000000" 
+            android:hint="   enter ur complaint here"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btSubmit"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/btPriority"
+            android:layout_alignRight="@+id/bt_LOCATION"
+            android:layout_below="@+id/btPriority"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:background="@drawable/loginshape"
+            android:text="submit"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/bt_LOCATION"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@+id/etMessage"
+            android:layout_below="@+id/etMessage"
+            android:background="@drawable/loginshape"
+            android:text="set location"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btPriority"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/bt_LOCATION"
+            android:layout_alignBottom="@+id/bt_LOCATION"
+            android:layout_alignLeft="@+id/etMessage"
+            android:background="@drawable/loginshape"
+            android:text="Priority"
+            android:textColor="#ffffff" />
+
+</RelativeLayout>
