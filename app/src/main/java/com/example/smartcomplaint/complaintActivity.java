@@ -45,6 +45,7 @@ import android.os.Message;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -55,7 +56,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 @SuppressLint({ "NewApi", "HandlerLeak" })
-public class complaintActivity extends Activity implements OnClickListener{
+public class complaintActivity extends AppCompatActivity implements OnClickListener{
 
 	String category;
 	Button btUpload,btTakePic,btSubmit,btPriority,bt_LOCATION;
@@ -80,8 +81,8 @@ public class complaintActivity extends Activity implements OnClickListener{
     private static String TABLE_COMPLAINT="complaint_table"; 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);	

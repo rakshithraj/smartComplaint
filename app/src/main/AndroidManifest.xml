@@ -41,16 +41,29 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name"
+            android:launchMode="singleTask"></activity>
         <activity
             android:name="com.example.smartcomplaint.registrationActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+
+        </activity>
         <activity
             android:name="com.example.smartcomplaint.loginActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
         <activity
             android:name="com.example.smartcomplaint.dashboardActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name">
+
+        </activity>
 
         <activity
             android:name="com.example.smartcomplaint.complaintActivity"

@@ -4,6 +4,7 @@
     <shared>
       <config>
         <devices>
+          <device id="3.2in QVGA (ADP2)" />
           <device id="4in WVGA (Nexus S)" />
           <device id="3.4in WQVGA" />
           <device id="4.65in 720p (Galaxy Nexus)" />
@@ -12,6 +13,11 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/complaint_page.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dashboard_page.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -20,113 +26,58 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f68d77c-4c77-4b5e-9bba-33f2e77d6277" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\appcompat_v7_22_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\gson_2_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\mediarouter_v7_22_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_ads_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_analytics_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_appindexing_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_appinvite_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_appstate_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_base_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_cast_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_drive_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_fitness_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_games_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_gcm_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_identity_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_location_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_maps_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_nearby_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_panorama_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_plus_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_safetynet_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_wallet_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\play_services_wearable_7_5_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\retrofit_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\support_annotations_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\libraries\support_v4_22_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\app.iml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\libs\retrofit-1.9.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\ComplaintStatus_Activity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\Error\ImageUploadError.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\GcmBroadcastReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\GcmIntentService.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\LenientGsonConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\ReceiveActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\aboutus_Activity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\complaintActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\dashboardActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\homeActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\interfaces\ApiService.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\interfaces\onLoginCompleted.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\lanuchActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\loginActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\models\ImgUploadResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\models\LoginDetails.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\registrationActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\services\RestService.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\utility\smartcomplaintConstant.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\utility\smartcomplaintUtility.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\webservice\ConnectSmartComplaintService.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\java\com\example\smartcomplaint\webservice\MySSLSocketFactory1111.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\azmal.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\azmal2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\bkshape.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\clod1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\cloud2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\cloud3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\cropped.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\glob1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\lanuch.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\loginshape.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-hdpi\star_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable-xxhdpi\ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable\editbg.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\drawable\whitebg.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\aboutuss_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\complaint_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\complaintsatus.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\dashboard_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\lanuch_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\login_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\recive_notification.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\layout\registration_page.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\menu\main.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values-sw600dp\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values-sw720dp-land\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values-v11\styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values-v14\styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values\dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values\strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\app\src\main\res\values\styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\gradle\wrapper\gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\gradle\wrapper\gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\gradlew" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\import-summary.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\settings.gradle" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\smartComplaint\smartComplaint.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\appcompat_v7_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\cardview_v7_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\com_android_volley_2015_05_28.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\design_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\glide_3_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\gson_2_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\httpmime_4_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\mediarouter_v7_22_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_ads_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_analytics_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_appindexing_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_appinvite_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_appstate_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_base_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_cast_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_drive_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_fitness_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_games_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_gcm_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_identity_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_location_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_maps_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_nearby_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_panorama_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_plus_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_safetynet_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_wallet_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\play_services_wearable_7_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\recyclerview_v7_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\support_annotations_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\support_v4_18_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\.idea\libraries\support_v4_23_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\app\src\main\res\values-v11\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Rakshith\AndroidStudioProjects\smartComplaint\app\src\main\res\values-v14\styles.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dashboardActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dashboardActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/registrationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/registrationActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/registration_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/registration_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smartComplaint.iws" />
@@ -157,21 +108,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+      <file leaf-file-name="registration_page.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/registration_page.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+              <caret line="178" column="46" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_page.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_page.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllStatusActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="complaintActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+              <folding>
+                <element signature="e#5565#5756#0" expanded="true" />
+                <element signature="e#5755#5756#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="complaint_page.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaint_page.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_page.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dashboard_page.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.994614">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2368,10 +2414,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dashboard_page.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dashboardActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SampleTabsStyled.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllsSatusActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/TestFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllSatusFragment.java" />
@@ -2384,7 +2426,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartCompAsyncTask/GetAllComplaints.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintConstant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/SmartComplaintConstant.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/registrationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintCoonfig.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dao/ComplaintInfoList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dao/ComplaintInfo.java" />
@@ -2392,9 +2433,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/MyAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/all_status.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_tabs.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/ConnectSmartComplaintService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/ComplaintStatus_Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/AppController.java" />
@@ -2402,12 +2440,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/MultipartRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/MultipartRequestTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartComplaintInterface/ServerResponse.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartComplAdapter/ComplaintDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/ComplaintDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/ResultActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartComplAdapter/MyAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintConfig.java" />
@@ -2416,9 +2451,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/result_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/ConnectWebService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/registrationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/registration_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dashboardActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java" />
       </list>
     </option>
   </component>
@@ -2436,8 +2482,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -2462,8 +2510,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2474,6 +2520,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2492,9 +2540,109 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcomplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartComplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smartcomplaint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2503,8 +2651,8 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="newapi" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="android_virtual_device" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2812,20 +2960,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26696834" sideWeight="0.47419354" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26666668" sideWeight="0.46801707" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30769232" sideWeight="0.11021505" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09111111" sideWeight="0.5932836" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295699" sideWeight="0.49051833" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52828056" sideWeight="0.4591398" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09111111" sideWeight="0.4067164" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20022625" sideWeight="0.46989247" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30769232" sideWeight="0.88978493" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.49569893" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2988889" sideWeight="0.8214286" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.4936034" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.50215054" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2834,7 +2982,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295699" sideWeight="0.50948167" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35067874" sideWeight="0.49569893" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28333333" sideWeight="0.48933902" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2919,158 +3067,102 @@
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusFragment.java</url>
+          <line>117</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>193</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>183</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>184</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>217</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>185</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>160</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>186</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java</url>
+          <line>191</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dao/ComplaintInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/editbg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/whitebg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/progress_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1326398">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="11" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dashboard_page.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08819715">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaintsatus.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaint_page.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaint_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.448277">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07024793">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/viewpagerindicator/TabPageIndicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328551">
-          <caret line="66" column="44" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_status.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31707317">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v14/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v11/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7777777">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2592592">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/webservice/ConnectSmartComplaintService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95786864">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/src/main/libs/httpmime-4.2.1.jar!/org/apache/http/entity/mime/Header.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7777777">
@@ -3106,20 +3198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartCompAsyncTask/ConnectServerAsynTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7919463">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86548674">
-          <caret line="232" column="13" selection-start-line="232" selection-start-column="13" selection-end-line="232" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/android_tool/adt-bundle-windows-x86_64-20140702/sdk/sources/android-23/android/widget/Button.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2778761">
@@ -3141,34 +3219,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30733946">
-          <caret line="322" column="89" selection-start-line="322" selection-start-column="89" selection-end-line="322" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_tabs.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3328">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/ComplaintStatus_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="54" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="95" selection-start-line="72" selection-start-column="78" selection-end-line="72" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -3183,13 +3237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33294392">
           <caret line="282" column="39" selection-start-line="282" selection-start-column="39" selection-end-line="282" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50163937">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3250,20 +3297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="44" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3279,14 +3312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/custom_tab_indicator.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.006968641">
@@ -3295,10 +3320,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custom_tab_indicator_divider.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -3306,14 +3331,249 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaintsatus.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/all_status.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_tabs.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="5" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/gcm/GcmIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88422817">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/gcm/GcmBroadcastReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5586854">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar!/com/google/android/gms/gcm/GoogleCloudMessaging.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3450065">
+          <caret line="162" column="31" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/LanuchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/SmartCompAsyncTask/ConnectServerAsynTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16475096">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/utility/smartcomplaintConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3908046">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/editbg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13298565">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/registrationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/registration_page.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="46" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/loginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_page.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="43" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.994614">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58101267">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.064556964">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dashboard_page.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/dashboardActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7316456">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/AllStatusActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/smartcomplaint/complaintActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+          <folding>
+            <element signature="e#5565#5756#0" expanded="true" />
+            <element signature="e#5755#5756#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/complaint_page.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

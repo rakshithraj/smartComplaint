@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.smartcomplaint.dao.ComplaintInfo;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 /**
  * Created by Rakshith on 10/13/2015.
  */
-public class AllStatusActivity extends FragmentActivity {
+public class AllStatusActivity extends AppCompatActivity {
     public final static int MNPO=0,MESCOM=1,TRAFFIC=2,POLICE=3;
     private static final String[] CONTENT = new String[] { "MNPO", "Mescom", "Traffic", "Police"};
     ArrayList<ComplaintInfo> myDataset=new ArrayList<ComplaintInfo>();
@@ -38,8 +39,8 @@ public class AllStatusActivity extends FragmentActivity {
         TabPageIndicator indicator = (TabPageIndicator)findViewById(R.id.indicator);
         indicator.setViewPager(pager);
         Drawable drawable;
-        if(Build.VERSION.SDK_INT>=21)
-           drawable= this.getDrawable(R.drawable.editbg);
+        if(Build.VERSION.SDK_INT<21)
+           drawable= this.getResources().getDrawable(R.drawable.editbg);
         else
             drawable= this.getDrawable(R.drawable.editbg);
 

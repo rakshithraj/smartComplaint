@@ -31,7 +31,10 @@ public class LanuchActivity extends Activity implements ServerResponse {
     Context context;
     GoogleCloudMessaging gcm;
     String user;
-    static final String GOOGLE_SENDER_ID = "420315138612";
+    //static final String GOOGLE_SENDER_ID = "420315138612";
+    static final String GOOGLE_SENDER_ID =   "1030759661189";
+
+
     boolean SERVICE_NOT_AVAILABLE = false;
     int retryCount = 0;
 
