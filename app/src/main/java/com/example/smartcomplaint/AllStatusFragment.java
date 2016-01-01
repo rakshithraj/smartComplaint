@@ -162,6 +162,8 @@ public final class AllStatusFragment extends Fragment implements ServerResponse 
         progressBar.setVisibility(View.GONE);
 
         if (result != null) {
+            result=result.replace(smartcomplaintConfig.serevr_string_status,"");
+            result = result.trim();
             Gson gson = new Gson();
             ComplaintInfoList complaintInfoList = gson.fromJson(result, ComplaintInfoList.class);
 

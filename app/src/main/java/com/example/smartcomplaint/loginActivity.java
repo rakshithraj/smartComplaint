@@ -28,7 +28,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -209,8 +208,15 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
 
 
         private void GetResponseResult(String response2) {
+
+             if( response == null){
+                 smartcomplaintUtility.showkDailog("some thing went wrong", loginActivity.this);
+                 return;
+            }
+
+            response=response.replace(smartcomplaintConfig.serevr_string_login,"");
             response = response.trim();
-            if (response.matches("") || response == null) {
+            if (response.matches("")){
                 smartcomplaintUtility.showkDailog("some thing went wrong", loginActivity.this);
             } else if (response.matches("valid user")) {
                 loginSucess = true;
