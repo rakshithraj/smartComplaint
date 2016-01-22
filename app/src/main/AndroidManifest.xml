@@ -6,6 +6,8 @@
 
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -18,7 +20,17 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        android:protectionLevel="signature" />
+    <permission
         android:name="com.example.smartcomplaint.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.example.smartcomplaint.permission.C2D_MESSAGE" />
@@ -30,6 +42,15 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".AnimationActiviy"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+
+        </activity>
+
+
         <activity
             android:name=".LanuchActivity"
             android:label="@string/app_name">
@@ -53,14 +74,16 @@
 
         </activity>
         <activity
-            android:name="com.example.smartcomplaint.loginActivity"
+            android:name=".LoginActivity"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
         <activity
-            android:name="com.example.smartcomplaint.dashboardActivity"
+            android:name=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"
             android:label="@string/app_name">
 
         </activity>
@@ -70,7 +93,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTask">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".dashboardActivity" />
+                android:value=".DashboardActivity" />
         </activity>
         <activity
             android:name="com.example.smartcomplaint.ReceiveActivity"
@@ -83,14 +106,17 @@
         <activity
             android:name="com.example.smartcomplaint.aboutus_Activity"
             android:label="@string/app_name"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DashboardActivity" />
+        </activity>
         <activity
             android:name=".AllStatusActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:theme="@style/StyledIndicators">
+            android:theme="@style/StyledTabIndicators">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".dashboardActivity" />
+                android:value=".DashboardActivity" />
 
         </activity>
 
@@ -122,6 +148,24 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider355198514515820"
+            android:exported="true" />
 
 
     </application>

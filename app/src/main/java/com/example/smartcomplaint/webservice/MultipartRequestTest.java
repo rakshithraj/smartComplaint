@@ -1,5 +1,7 @@
 package com.example.smartcomplaint.webservice;
 
+import android.util.Log;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -30,7 +32,7 @@ public class MultipartRequestTest extends Request {
 
     String boundary = "apiclient-" + System.currentTimeMillis();
     String  mimeType = "multipart/form-data;boundary=" + boundary;
-    public MultipartRequestTest(int method, String url,Response.Listener resplistener, Response.ErrorListener errorListener,File file) {
+    public MultipartRequestTest(int method, String url, Response.Listener resplistener, Response.ErrorListener errorListener, File file) {
         super(method, url, errorListener);
         mListener = resplistener;
         mFilePart = file;
@@ -38,7 +40,7 @@ public class MultipartRequestTest extends Request {
     }
 
 
-    public MultipartRequestTest(int method, String url,Response.Listener resplistener, Response.ErrorListener errorListener,MultipartEntity entity ) {
+    public MultipartRequestTest(int method, String url, Response.Listener resplistener, Response.ErrorListener errorListener, MultipartEntity entity) {
         super(method, url, errorListener);
         mListener = resplistener;
         this.entity = entity;

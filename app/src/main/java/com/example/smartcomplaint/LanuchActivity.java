@@ -73,7 +73,7 @@ public class LanuchActivity extends Activity implements ServerResponse {
                         final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), LanuchActivity.this.getApplicationContext().MODE_PRIVATE);
                         boolean login = prefs.getBoolean("login", false);
                         if (login) {
-                            Intent mainPage = new Intent(LanuchActivity.this, dashboardActivity.class);
+                            Intent mainPage = new Intent(LanuchActivity.this, DashboardActivity.class);
                             startActivity(mainPage);
                         } else {
                             Log.d("tag", "call HomeActivity");
@@ -131,7 +131,7 @@ public class LanuchActivity extends Activity implements ServerResponse {
 
     @Override
     public void onServerResponse(String result) {
-        Intent mainPage = new Intent(LanuchActivity.this, dashboardActivity.class);
+        Intent mainPage = new Intent(LanuchActivity.this, DashboardActivity.class);
         startActivity(mainPage);
         finish();
     }
@@ -158,10 +158,11 @@ public class LanuchActivity extends Activity implements ServerResponse {
         protected void onPostExecute(String result) {
             // TODO Auto-generated method stub
             super.onPostExecute(result);
+            final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), LanuchActivity.this.getApplicationContext().MODE_PRIVATE);
+            boolean login = prefs.getBoolean("login", false);
+            user = prefs.getString("userID", "");
             if (!SERVICE_NOT_AVAILABLE) {
-                final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), LanuchActivity.this.getApplicationContext().MODE_PRIVATE);
-                boolean login = prefs.getBoolean("login", false);
-                user = prefs.getString("userID", "");
+
                 if (login) {
 
                    // new Task().execute();
@@ -172,8 +173,22 @@ public class LanuchActivity extends Activity implements ServerResponse {
                 } else {
                     Intent mainPage = new Intent(LanuchActivity.this, HomeActivity.class);
                     startActivity(mainPage);
+                    finish();
                 }
 
+            }else{
+                if(retryCount>=5){
+                    if (login) {
+
+                        Intent mainPage = new Intent(LanuchActivity.this, DashboardActivity.class);
+                        startActivity(mainPage);
+                        finish();
+                    } else {
+                        Intent mainPage = new Intent(LanuchActivity.this, HomeActivity.class);
+                        startActivity(mainPage);
+                        finish();
+                    }
+                }
             }
         }
 
@@ -256,7 +271,7 @@ public class LanuchActivity extends Activity implements ServerResponse {
         protected void onPostExecute(String result) {
             // TODO Auto-generated method stub
             Log.d("tag", "response=" + response);
-            Intent mainPage = new Intent(LanuchActivity.this, dashboardActivity.class);
+            Intent mainPage = new Intent(LanuchActivity.this, DashboardActivity.class);
             startActivity(mainPage);
             finish();
 

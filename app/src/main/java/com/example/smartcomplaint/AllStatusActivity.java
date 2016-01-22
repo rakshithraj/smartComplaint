@@ -1,14 +1,17 @@
 package com.example.smartcomplaint;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.smartcomplaint.dao.ComplaintInfo;
@@ -29,26 +32,34 @@ public class AllStatusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.simple_tabs);
+        setContentView(R.layout.test);
+
+        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
+        this.setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FragmentPagerAdapter adapter = new GoogleMusicAdapter(getSupportFragmentManager());
 
         ViewPager pager = (ViewPager)findViewById(R.id.pager);
         pager.setAdapter(adapter);
 
-        TabPageIndicator indicator = (TabPageIndicator)findViewById(R.id.indicator);
-        indicator.setViewPager(pager);
+        TabLayout indicator = (TabLayout)findViewById(R.id.indicator);
+        indicator.setupWithViewPager(pager);
+
+        indicator.setTabTextColors(Color.WHITE,Color.WHITE);
+
         Drawable drawable;
         if(Build.VERSION.SDK_INT<21)
            drawable= this.getResources().getDrawable(R.drawable.editbg);
         else
             drawable= this.getDrawable(R.drawable.editbg);
 
-        if(Build.VERSION.SDK_INT>=16)
+       /* if(Build.VERSION.SDK_INT>=16)
             indicator.setBackground(drawable);
 
         else
-        indicator.setBackgroundDrawable(drawable);
+        indicator.setBackgroundDrawable(drawable);*/
 
     }
 

@@ -23,8 +23,8 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_above="@+id/linearLayout">
+        android:layout_above="@+id/linearLayout"
+        android:orientation="vertical">
 
         <com.viewpagerindicator.TabPageIndicator
             android:id="@+id/indicator"
@@ -42,16 +42,15 @@
     </LinearLayout>
 
 
-
     <LinearLayout
 
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout"
-        android:orientation="horizontal" >
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button1"
@@ -71,8 +70,6 @@
             android:text="Resolved"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/white" />
-
-
 
 
         <Button

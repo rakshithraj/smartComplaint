@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':explosionfield', ':google-play-services_lib'
 include ':library'

@@ -67,10 +67,10 @@ public class ComplaintDetailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_screen);
 
-        Bundle bundle=this.getIntent().getExtras();
-        complaintInfo.setMessage(bundle.getString("message", null));
-        complaintInfo.setMyLocation(bundle.getString("location", null));
-        complaintInfo.setImage(bundle.getString("image", null));
+
+        complaintInfo.setMessage(this.getIntent().getStringExtra("message"));
+        complaintInfo.setMyLocation(this.getIntent().getStringExtra("location"));
+        complaintInfo.setImage(this.getIntent().getStringExtra("image"));
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);

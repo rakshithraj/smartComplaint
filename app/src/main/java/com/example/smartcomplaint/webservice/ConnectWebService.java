@@ -250,7 +250,8 @@ public class ConnectWebService {
                     public void onResponse(String response) {
 
                         pDialog.hide();
-                        Toast.makeText(activity, "response=" + response, Toast.LENGTH_LONG).show();
+                        serverResponse.onServerResponse(response);
+                  //      Toast.makeText(activity, "response=" + response, Toast.LENGTH_LONG).show();
                     }
                 }, new Response.ErrorListener() {
 
@@ -258,7 +259,8 @@ public class ConnectWebService {
             public void onErrorResponse(VolleyError error) {
 
                 pDialog.hide();
-                Toast.makeText(activity, "response=" + error, Toast.LENGTH_LONG).show();
+                serverResponse.onServerError(error.toString());
+             //   Toast.makeText(activity, "response=" + error, Toast.LENGTH_LONG).show();
             }
         }) {
 

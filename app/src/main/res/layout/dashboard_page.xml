@@ -1,125 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cropped"
-    android:orientation="vertical"
-    android:padding="5dp">
+    tools:openDrawer="start">
 
-    <Button
-        android:id="@+id/btLogout"
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="@drawable/cropped"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/lyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linearLayout"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btMNPO"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_below="@+id/btPolice"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/whitebg"
+                        android:orientation="horizontal"
+                        android:text="MNPO"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/btMescom"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_alignTop="@+id/btMNPO"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/whitebg"
+                        android:text="Mescom"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btTraffic"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/whitebg"
+                        android:text="Traffic"
+                        android:textColor="#ffffff" />
+
+                    <Button
+                        android:id="@+id/btPolice"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/whitebg"
+                        android:text="Police"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/loginshape"
-        android:padding="2dp"
-        android:text="@string/logout"
-        android:textColor="@android:color/white" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btLogout"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:weightSum="2"
-        android:layout_above="@+id/linearLayout">
+
+        android:layout_gravity="start"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btMNPO"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_below="@+id/btPolice"
-                android:background="@drawable/whitebg"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nav_header_height"
+                android:background="@drawable/side_nav_bar"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <Button
+                    android:id="@+id/btLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/loginshape"
+                    android:padding="2dp"
+                    android:text="@string/logout"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+                <com.example.smartcomplaint.CustomView.MyCircleNetWorkImage
+
+                    android:id="@+id/profileImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btLogout"
+                    android:layout_above="@+id/tvName"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:src="@drawable/profile_icon"
+
+                    />
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/profileImageView"
+                    android:layout_alignRight="@+id/profileImageView"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:text="name"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/btStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:text="MNPO"
-                android:textColor="#ffffff" />
+                android:weightSum="10">
 
-            <Button
-                android:id="@+id/btMescom"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_alignTop="@+id/btMNPO"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/whitebg"
-                android:text="Mescom"
-                android:textColor="#ffffff" />
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="8"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/status" />
+
+                <TextView
+                    android:id="@android:id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:minHeight="?attr/listPreferredItemHeightSmall"
+                    android:paddingEnd="?attr/listPreferredItemPaddingRight"
+                    android:paddingLeft="?attr/listPreferredItemPaddingLeft"
+                    android:paddingRight="?attr/listPreferredItemPaddingRight"
+                    android:paddingStart="?attr/listPreferredItemPaddingLeft"
+                    android:text="Status"
+                    android:textAppearance="?attr/textAppearanceListItemSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/btAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:src="@drawable/about_us" />
+
+                <TextView
+                    android:id="@android:id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:minHeight="?attr/listPreferredItemHeightSmall"
+                    android:paddingEnd="?attr/listPreferredItemPaddingRight"
+                    android:paddingLeft="?attr/listPreferredItemPaddingLeft"
+                    android:paddingRight="?attr/listPreferredItemPaddingRight"
+                    android:paddingStart="?attr/listPreferredItemPaddingLeft"
+                    android:text="About Us"
+                    android:textAppearance="?attr/textAppearanceListItemSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_weight="1"
-
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btTraffic"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:background="@drawable/whitebg"
-                android:text="Traffic"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="#ffffff" />
-
-            <Button
-                android:id="@+id/btPolice"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/whitebg"
-                android:text="Police"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="26dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:id="@+id/linearLayout">
-
-        <Button
-            android:id="@+id/btStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#f00"
-            android:text="status"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ffffff" />
-
-        <Button
-            android:id="@+id/btAboutUs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#f00"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="About us"
-            android:textColor="#ffffff" />
-    </LinearLayout>
-</RelativeLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

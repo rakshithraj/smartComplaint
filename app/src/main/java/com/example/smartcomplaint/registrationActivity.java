@@ -28,9 +28,15 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 
 
+import com.example.smartcomplaint.dao.LoginUser;
 import com.example.smartcomplaint.utility.SmartComplaintConstant;
 import com.example.smartcomplaint.utility.smartcomplaintConfig;
 import com.example.smartcomplaint.utility.smartcomplaintUtility;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class registrationActivity extends AppCompatActivity implements OnClickListener{
@@ -86,8 +92,8 @@ public class registrationActivity extends AppCompatActivity implements OnClickLi
 		radio_female=(RadioButton)findViewById(R.id.radio_female);
 		btSingUp=(Button)findViewById(R.id.btSingUp);
 		btSingUp.setOnClickListener(this);
-		
-		
+
+
 	}
 
 
@@ -176,23 +182,36 @@ public class registrationActivity extends AppCompatActivity implements OnClickLi
 			smartcomplaintUtility.showkDailog("user with given email allredy exits",registrationActivity.this);
 			
 		}else{
-			
-			if(response.matches("inserted")){
-				registrationSucess=true;
-				 final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(),registrationActivity.this.getApplicationContext().MODE_PRIVATE);
-			    SharedPreferences.Editor editor = prefs.edit();
-			    editor.putBoolean("login",true);
-			    editor.putString("userID",Email);
-			    editor.commit();
-				//Intent intent=new Intent(registrationActivity.this,dashboardActivity.class);
-				//startActivity(intent);
+			JSONArray jsonArray = null;
+			try {
+				jsonArray = new JSONArray(response);
 
-				Intent resultIntent = new Intent();
-				setResult(Activity.RESULT_OK, resultIntent);
-				finish();
-				
-			}else if(response.matches("insert_failed")){
-				smartcomplaintUtility.showkDailog("some thing went wrong ",registrationActivity.this);
+
+				if (jsonArray != null){
+					JSONObject jsonObject = (JSONObject) jsonArray.get(0);
+
+					Gson gson=new Gson();
+					LoginUser loginUser=gson.fromJson(jsonObject.toString(),LoginUser.class);
+					loginUser.Serialize(registrationActivity.this);
+
+					registrationSucess = true;
+					final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), registrationActivity.this.getApplicationContext().MODE_PRIVATE);
+					SharedPreferences.Editor editor = prefs.edit();
+					editor.putBoolean("login", true);
+					editor.putString("userID", Email);
+					editor.commit();
+					//Intent intent=new Intent(registrationActivity.this,DashboardActivity.class);
+					//startActivity(intent);
+
+					Intent resultIntent = new Intent();
+					setResult(Activity.RESULT_OK, resultIntent);
+					finish();
+
+				} else if (response.matches("insert_failed")) {
+					smartcomplaintUtility.showkDailog("some thing went wrong ", registrationActivity.this);
+				}
+			}catch (JSONException e) {
+				e.printStackTrace();
 			}
 			
 		}
@@ -204,50 +223,64 @@ public class registrationActivity extends AppCompatActivity implements OnClickLi
 
 	private boolean validateData() {
 		// TODO Auto-generated method stub
+
        if(Email.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter email", this);
+    	  // smartcomplaintUtility.showkDailog("Enter email", this);
+		   etEmail.setError("Enter email");
 			return false;
 		}else if(!checkEmailCorrect(Email)){
-			smartcomplaintUtility.showkDailog("Enter valid  email", this);
+			//smartcomplaintUtility.showkDailog("Enter valid  email", this);
+		   etEmail.setError("Enter valid  email");
 			return false;
 		}
        if(Password.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter Password", this);
+    	  // smartcomplaintUtility.showkDailog("Enter Password", this);
+		   etPassword.setError("Enter Password");
 			return false;
 		}else if(Password.length()<6){
-			smartcomplaintUtility.showkDailog("Password to short", this);
+			//smartcomplaintUtility.showkDailog("Password to short", this);
+		   etPassword.setError("Password to short");
 			return false;
 		}
        if(RetypePassword.matches("")){
-    	   smartcomplaintUtility.showkDailog("Renter Password", this);
+    	  // smartcomplaintUtility.showkDailog("Renter Password", this);
+		   etRetypePassword.setError("Renter Password");
 			return false;
 		}
        if(Name.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter Name", this);
+
+    	  // smartcomplaintUtility.showkDailog("Enter Name", this);
+		   etName.setError("Enter Name");
 			return false;
 		}
        if(Age.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter Age", this);
+    	   //smartcomplaintUtility.showkDailog("Enter Age", this);
+		   etAge.setError("Enter Age");
 			return false;
 		}
        if(Contact.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter Contact", this);
+    	   //smartcomplaintUtility.showkDailog("Enter Contact", this);
+		   etContact.setError("Enter Contact");
 			return false;
 		}
        if(City.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter City", this);
+    	   //smartcomplaintUtility.showkDailog("Enter City", this);
+		   etCity.setError("Enter City");
 			return false;
 		} 
        if(male==false && female==false){
     	   smartcomplaintUtility.showkDailog("Select sex", this);
+
     	   return false;
        }
        if(State.matches("")){
-    	   smartcomplaintUtility.showkDailog("Enter State", this);
+    	  // smartcomplaintUtility.showkDailog("Enter State", this);
+		   etState.setError("Enter State");
     	   return false;
        }
        if(!Password.equals(RetypePassword)){
-    	   smartcomplaintUtility.showkDailog("Enter Password not match retyped", this);
+    	  // smartcomplaintUtility.showkDailog("Enter Password not match retyped", this);
+		   etRetypePassword.setError("Enter Password not match retyped");
     	   return false;
        }
             
@@ -322,8 +355,10 @@ public class registrationActivity extends AppCompatActivity implements OnClickLi
           
           data += "&" + URLEncoder.encode("GcmId", "UTF-8") 
                   + "=" + URLEncoder.encode(SmartComplaintConstant.REGISTER_KEY, "UTF-8");
-          
-          
+
+		data += "&" + URLEncoder.encode("profile_pic", "UTF-8")
+				+ "=" + URLEncoder.encode("", "UTF-8");
+
           String text = "";
           BufferedReader reader=null;
 

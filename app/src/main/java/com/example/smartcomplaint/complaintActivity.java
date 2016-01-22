@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
@@ -45,6 +46,9 @@ import android.os.Message;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images.Media;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -54,6 +58,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 @SuppressLint({ "NewApi", "HandlerLeak" })
 public class complaintActivity extends AppCompatActivity implements OnClickListener{
@@ -78,7 +83,18 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 	double longitude,latitude;
 	SQLiteDatabase mydb;
 	private static String DBNAME = "smartcomplaint.db"; 
-    private static String TABLE_COMPLAINT="complaint_table"; 
+    private static String TABLE_COMPLAINT="complaint_table";
+
+	 String [] PermissionsLocation =
+	{
+		Manifest.permission.ACCESS_COARSE_LOCATION,
+			Manifest.permission.ACCESS_FINE_LOCATION,
+			Manifest.permission.ACCESS_NETWORK_STATE
+	};
+
+	static int RequestLocationId = 0;
+	static int RequestNewtWorkLocationId = 1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -93,6 +109,29 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 		 final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(),this.getApplicationContext().MODE_PRIVATE);
 		 userId=prefs.getString("userID","");
 	    intialize();
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+		if(RequestLocationId==requestCode){
+			for(int i=0;i<grantResults.length;i++)
+				if(grantResults[i]!=PackageManager.PERMISSION_GRANTED){
+					return;
+				}
+			getLocatonUsingGps();
+		}else 	if(RequestNewtWorkLocationId==requestCode){
+			for(int i=0;i<grantResults.length;i++)
+				if(grantResults[i]!=PackageManager.PERMISSION_GRANTED){
+					return;
+				}
+			getLocatonUsingNetwork();
+		}
+
+
+
+
 	}
 
 	private void intialize() {
@@ -227,12 +266,61 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 			 String aResponse = msg.getData().getString("message");
 			 if(aResponse.matches("getLocatonUsingNetwork"))
 				 getLocatonUsingNetwork();
-			 if(aResponse.matches("getLocatonUsingGps"))
-				 getLocatonUsingGps();
+			 if(aResponse.matches("getLocatonUsingGps")) {
+				 if ( Build.VERSION.SDK_INT < 23){
+					 getLocatonUsingGps();
+			      }else{
+					 GetLocationPermissionAsync();
+				 }
+			 }
 			 
 			 
 		 }
 	};
+
+
+
+	void  GetLocationPermissionAsync()
+	{
+		//Check to see if any permission in our group is available, if one, then all are
+		String permission = Manifest.permission.ACCESS_FINE_LOCATION;
+		if (ContextCompat.checkSelfPermission(this,permission) == (int) PackageManager.PERMISSION_GRANTED)
+		{
+			getLocatonUsingGps();
+			return;
+		}
+
+		//need to request permission
+		if (ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
+		{
+
+			 new AlertDialog.Builder(
+					complaintActivity.this)
+
+			.setMessage("You need to allow access to Location")
+			.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					dialog.cancel();
+				}
+			})
+			.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					ActivityCompat.requestPermissions(complaintActivity.this,
+							PermissionsLocation,
+							RequestLocationId);
+				}
+			}).create().show();
+
+			return;
+		}
+		//Finally request permissions with the list of permissions and Id
+		ActivityCompat.requestPermissions(complaintActivity.this,
+				PermissionsLocation,
+				RequestLocationId);
+	}
+
 	
 	protected void AtomaicallyLocationPicker() {
 		
@@ -300,8 +388,11 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 		boolean isGPSEnabled = locationManager
                 .isProviderEnabled(LocationManager.GPS_PROVIDER);
 		Log.d("tag", "isGPSEnabled="+isGPSEnabled);
+
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
 		  mLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+
 			Log.d("tag", "mLocation="+mLocation);
 		  if (mLocation!=null)       
 	        {
@@ -321,25 +412,32 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 	public void getLocatonUsingNetwork() {
 		// TODO Auto-generated method stub
 		Log.d("tag", "Network");
+
+
+
 		  locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		   locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+
 		    boolean isNetworkEnabled = locationManager
 	                .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-		    Log.d("tag", "isNetworkEnabled="+isNetworkEnabled);
-		   mLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-		   if (mLocation == null){
+		Log.d("tag", "isNetworkEnabled="+isNetworkEnabled);
 
-	        	showDailogForLocationServiceEnable();
-	        	return;
-	        }
-	        else
-	        {
-	        	 latitude = mLocation.getLatitude();
-	        	 longitude = mLocation.getLongitude();
-	        	 Log.d("tag", "latitude="+latitude);
-	        	 Log.d("tag", "longitude="+longitude);
-	        	 getAddress();
-	        }
+
+		if(isNetworkEnabled) {
+			locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+
+			mLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+			if (mLocation == null) {
+
+				showDailogForLocationServiceEnable();
+				return;
+			} else {
+				latitude = mLocation.getLatitude();
+				longitude = mLocation.getLongitude();
+				Log.d("tag", "latitude=" + latitude);
+				Log.d("tag", "longitude=" + longitude);
+				getAddress();
+			}
+		}
 	}
 	
 	public void getAddress() {
@@ -495,7 +593,8 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
                    picture=true;
                 }
                 
-                break;   
+                break;
+
             case camdata:
             	Log.d("tag","camera");
             	Log.d("tag","resultCode="+resultCode);
@@ -679,7 +778,7 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 		protected String doInBackground(Context... arg0) {			
 		
 			
-			response=submitToServer();
+			submitToServer();
 			
 			
 			return null;
@@ -846,7 +945,7 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 			 submitToServer();
 		
 		 }
-		 return response.toString();
+		 return "";
 		 } // End else 
 		
 		
@@ -857,7 +956,7 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
 	public  void showDailogForLocationServiceEnable(){
         AlertDialog.Builder builder = new AlertDialog.Builder(complaintActivity.this);
         builder.setMessage("Please enable Use wireless network  in your Locations Services")
-        .setTitle("DenaBank")
+        .setTitle("SmartComplaint")
         .setCancelable(false)
         .setPositiveButton("OK ", new DialogInterface.OnClickListener() {
             @Override
@@ -868,6 +967,6 @@ public class complaintActivity extends AppCompatActivity implements OnClickListe
         });
         builder.show();
     }
-	
+
 	
 }

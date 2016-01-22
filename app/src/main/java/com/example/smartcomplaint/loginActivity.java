@@ -12,10 +12,12 @@ import java.util.regex.Pattern;
 
 
 import com.example.smartcomplaint.SmartComplaintInterface.ServerResponse;
+import com.example.smartcomplaint.dao.LoginUser;
 import com.example.smartcomplaint.utility.SmartComplaintConstant;
 import com.example.smartcomplaint.utility.smartcomplaintConfig;
 import com.example.smartcomplaint.utility.smartcomplaintUtility;
 import com.example.smartcomplaint.webservice.ConnectWebService;
+import com.google.gson.Gson;
 
 
 import android.app.Activity;
@@ -24,6 +26,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -33,7 +36,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class loginActivity extends AppCompatActivity implements OnClickListener , ServerResponse {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class LoginActivity extends AppCompatActivity implements OnClickListener, ServerResponse {
 
 
     @Override
@@ -100,18 +107,22 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
     private boolean validateData() {
         // TODO Auto-generated method stub
         if (LoginEmail.matches("")) {
-            smartcomplaintUtility.showkDailog("Enter Email", this);
+            // smartcomplaintUtility.showkDailog("Enter Email", this);
+            etLoginEmail.setError("Enter Email");
             return false;
         } else if (!checkEmailCorrect(LoginEmail)) {
-            smartcomplaintUtility.showkDailog("Enter valid Email", this);
+            //smartcomplaintUtility.showkDailog("Enter valid Email", this);
+            etLoginEmail.setError("Enter Email");
             return false;
         }
 
         if (LoginPassword.matches("")) {
-            smartcomplaintUtility.showkDailog("Enter Password", this);
+            // smartcomplaintUtility.showkDailog("Enter Password", this);
+            etLoginPassword.setError("Enter Password");
             return false;
         } else if (LoginPassword.length() < 6) {
-            smartcomplaintUtility.showkDailog("Password to short", this);
+            //smartcomplaintUtility.showkDailog("Password to short", this);
+            etLoginPassword.setError("Enter Password");
             return false;
         }
 
@@ -177,7 +188,7 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
         protected void onPreExecute() {
             super.onPreExecute();
             Log.d("tag", "onPreExecute=");
-            mProgressDialog = smartcomplaintUtility.showProgressDialog(true, loginActivity.this, mProgressDialog);
+            mProgressDialog = smartcomplaintUtility.showProgressDialog(true, LoginActivity.this, mProgressDialog);
 
         }
 
@@ -201,7 +212,7 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
             Log.d("tag", "response=" + response);
             if (mProgressDialog != null)
                 if (mProgressDialog.isShowing()) {
-                    mProgressDialog = smartcomplaintUtility.showProgressDialog(false, loginActivity.this, mProgressDialog);
+                    mProgressDialog = smartcomplaintUtility.showProgressDialog(false, LoginActivity.this, mProgressDialog);
                 }
             GetResponseResult(response);
         }
@@ -209,34 +220,62 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
 
         private void GetResponseResult(String response2) {
 
-             if( response == null){
-                 smartcomplaintUtility.showkDailog("some thing went wrong", loginActivity.this);
-                 return;
+            if (response == null) {
+                smartcomplaintUtility.showkDailog("some thing went wrong", LoginActivity.this);
+                return;
             }
 
-            response=response.replace(smartcomplaintConfig.serevr_string_login,"");
+            response = response.replace(smartcomplaintConfig.serevr_string_login, "");
             response = response.trim();
-            if (response.matches("")){
-                smartcomplaintUtility.showkDailog("some thing went wrong", loginActivity.this);
-            } else if (response.matches("valid user")) {
-                loginSucess = true;
-                final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), loginActivity.this.getApplicationContext().MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.putBoolean("login", true);
-                editor.putString("userID", LoginEmail);
-                editor.commit();
-                //new updateGcm().execute()
-                ConnectWebService connectWebService=new ConnectWebService();
-                connectWebService.setOnServerResponse(loginActivity.this);
-                connectWebService.stringGetRequest(smartcomplaintConfig.GCM_UPDATE_URL + "newGCM=" + SmartComplaintConstant.REGISTER_KEY + "&userId="+LoginEmail,loginActivity.this);
-                Intent resultIntent = new Intent();
-                setResult(Activity.RESULT_OK, resultIntent);
 
-                finish();
-
+            if (response == null) {
+                smartcomplaintUtility.showkDailog("some thing went wrong", LoginActivity.this);
+                return;
+            }
+            if (response.matches("")) {
+                smartcomplaintUtility.showkDailog("some thing went wrong", LoginActivity.this);
+                return;
+            } else if (response.matches("failed")) {
+                smartcomplaintUtility.showkDailog("username or password wrong", LoginActivity.this);
+                return;
             } else {
-                smartcomplaintUtility.showkDailog("username or password wrong", loginActivity.this);
+                JSONArray jsonArray = null;
+                try {
+                    jsonArray = new JSONArray(response);
 
+
+                    if (jsonArray != null) {
+                        JSONObject jsonObject = (JSONObject) jsonArray.get(0);
+
+                        Gson gson = new Gson();
+                        LoginUser loginUser = gson.fromJson(jsonObject.toString(), LoginUser.class);
+                        loginUser.Serialize(LoginActivity.this);
+                        loginSucess = true;
+                        final SharedPreferences prefs = getSharedPreferences(LanuchActivity.class.getSimpleName(), LoginActivity.this.getApplicationContext().MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putBoolean("login", true);
+                        editor.putString("userID", LoginEmail);
+
+                        if (Build.VERSION.SDK_INT > 9)
+                            editor.commit();
+                        else
+                            editor.apply();
+                        //new updateGcm().execute()
+                        ConnectWebService connectWebService = new ConnectWebService();
+                        connectWebService.setOnServerResponse(LoginActivity.this);
+                        connectWebService.stringGetRequest(smartcomplaintConfig.GCM_UPDATE_URL + "newGCM=" + SmartComplaintConstant.REGISTER_KEY + "&userId=" + LoginEmail, LoginActivity.this);
+                        Intent resultIntent = new Intent();
+                        setResult(Activity.RESULT_OK, resultIntent);
+
+                        finish();
+
+                    } else {
+                        smartcomplaintUtility.showkDailog("username or password wrong", LoginActivity.this);
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
 
 
@@ -265,8 +304,8 @@ public class loginActivity extends AppCompatActivity implements OnClickListener 
 
             try {
                 Log.d("tag", "update");
-               // ConnectSmartComplaintService httpReq = new ConnectSmartComplaintService();
-               // response = httpReq.executeget(smartcomplaintConfig.GCM_UPDATE_URL + "newGCM=" + SmartComplaintConstant.REGISTER_KEY + "&userId=" + LoginEmail, null, context);
+                // ConnectSmartComplaintService httpReq = new ConnectSmartComplaintService();
+                // response = httpReq.executeget(smartcomplaintConfig.GCM_UPDATE_URL + "newGCM=" + SmartComplaintConstant.REGISTER_KEY + "&userId=" + LoginEmail, null, context);
 
             } catch (Exception e) {
                 // TODO Auto-generated catch block

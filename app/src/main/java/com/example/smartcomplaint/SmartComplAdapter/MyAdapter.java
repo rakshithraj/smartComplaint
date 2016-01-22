@@ -115,11 +115,12 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         @Override
         public void onClick(View v) {
             Bundle bundle = new Bundle();
-            bundle.putString("message", complaintInfo.getMessage());
-            bundle.putString("location", complaintInfo.getMyLocation());
-            bundle.putString("image", complaintInfo.getImage());
+
             Intent intent = new Intent(mActivity, ComplaintDetailedActivity.class);
-            intent.putExtras(bundle);
+            intent.putExtra("message", complaintInfo.getMessage());
+            intent.putExtra("location", complaintInfo.getMyLocation());
+            intent.putExtra("image", complaintInfo.getImage());
+
             mActivity.startActivity(intent);
         }
     }
